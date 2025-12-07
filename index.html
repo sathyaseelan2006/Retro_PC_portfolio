@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sathyaseelan K - B.Tech IT Student | Portfolio showcasing projects in AI, Machine Learning, and Web Development">
+    <title>Sathyaseelan | Retro Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Desktop Environment -->
+    <div class="desktop-container">
+        <div class="row g-0 h-100">
+            <!-- Left Sidebar - Music Player & Info -->
+            <div class="col-auto left-sidebar">
+                <!-- Music Player Widget -->
+                <div class="music-player-widget">
+                    <div class="widget-header">
+                        <span class="widget-icon">📀</span>
+                        <span class="widget-title">Music</span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="album-art-large">
+                            <div class="album-icon">🎵</div>
+                        </div>
+                        <div class="track-display">
+                            <div class="track-name" id="trackName">No Track</div>
+                            <div class="track-time" id="trackTime">0:00 / 0:00</div>
+                        </div>
+                        <div class="system-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">vol</span>
+                                <div class="stat-bar volume-bar" id="volumeBar">
+                                    <div class="stat-fill" id="volumeFill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">prg</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" id="progressFill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ram</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-controls-widget">
+                            <button class="ctrl-btn" id="prevBtn">⏮</button>
+                            <button class="ctrl-btn play-btn" id="playPause">▶</button>
+                            <button class="ctrl-btn" id="nextBtn">⏭</button>
+                        </div>
+                    </div>
+                    <!-- Hidden Audio Element -->
+                    <audio id="audioPlayer" preload="metadata"></audio>
+                </div>
+
+                <!-- Now Playing Info -->
+                <div class="now-playing-card" id="nowPlayingCard">
+                    <div class="np-header" id="npTitle">No Track Playing</div>
+                    <div class="np-subtext" id="npArtist">Select a track</div>
+                    <div class="np-footer" id="npAlbum">---</div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col main-content-area">
+                <!-- Main Browser Window -->
+                <div class="browser-window" id="mainWindow">
+                    <div class="browser-header">
+                        <div class="browser-controls">
+                            <span class="control-dot red"></span>
+                            <span class="control-dot yellow"></span>
+                            <span class="control-dot green"></span>
+                        </div>
+                        <div class="browser-url">/home/fun ~ quickbrowser</div>
+                    </div>
+                    <div class="browser-body">
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="search">
+                        </div>
+                        <div class="welcome-section">
+                            <h1 class="welcome-title">Welcome!</h1>
+                            <div class="nav-buttons">
+                                <button class="nav-btn" data-section="github">github</button>
+                                <button class="nav-btn" data-section="portfolio">portfolio</button>
+                                <button class="nav-btn" data-section="about">about me</button>
+                                <button class="nav-btn" data-section="skills">skills</button>
+                                <button class="nav-btn" data-section="certifications">certifications</button>
+                                <button class="nav-btn" data-section="goals">goals 2025</button>
+                                <button class="nav-btn" data-section="resume">resume</button>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://youtube.com" target="_blank" class="social-icon">▶️</a>
+                            <a href="https://github.com/sathyaseelan2006" target="_blank" class="social-icon">G</a>
+                            <a href="https://spotify.com" target="_blank" class="social-icon">🎵</a>
+                            <a href="https://sathya34.vercel.app/" target="_blank" class="social-icon">👨‍💻</a>
+                        </div>
+
+                        <!-- Content Sections (Hidden by default) -->
+                        <div class="content-section" id="section-github" style="display: none;">
+                            <h2 class="section-title">GitHub Projects</h2>
+                            <div class="projects-list">
+                                <div class="project-item">
+                                    <h3>🌍 Air Pollution Monitoring System</h3>
+                                    <p>IoT-based air quality monitoring with real-time tracking and alerts</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/sathyaseelan2006/Megam" target="_blank"
+                                            class="link-btn">Code</a>
+                                        <a href="https://megam.vercel.app/" target="_blank" class="link-btn">Demo</a>
+                                    </div>
+                                </div>
+                                <div class="project-item">
+                                    <h3>📚 Learning Management System</h3>
+                                    <p>Comprehensive platform for online education with course management</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/sathyaseelan2006/Leaning-Management-System.git"
+                                            target="_blank" class="link-btn">Code</a>
+                                        <a href="https://lms-demo.vercel.app" target="_blank" class="link-btn">Demo</a>
+                                    </div>
+                                </div>
+                                <div class="project-item">
+                                    <h3>🤖 LUDO AI - Personal Assistant</h3>
+                                    <p>Lightweight portfolio-integrated personal assistant</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/sathyaseelan2006/fts" target="_blank"
+                                            class="link-btn">Code</a>
+                                    </div>
+                                </div>
+                                <div class="project-item">
+                                    <h3>✋ Hand Gesture Calculator</h3>
+                                    <p>Real-time calculator using computer vision and gesture recognition</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/sathyaseelan2006/handgesture_calculator"
+                                            target="_blank" class="link-btn">Code</a>
+                                        <a href="https://hand-gesture-calc.vercel.app" target="_blank"
+                                            class="link-btn">Demo</a>
+                                    </div>
+                                </div>
+                                <div class="project-item">
+                                    <h3>👁️ AI Face Recognition Attendance</h3>
+                                    <p>Advanced automated attendance system with facial recognition</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/sathyaseelan2006/AI-powered-face-tracking-attendance-system"
+                                            target="_blank" class="link-btn">Code</a>
+                                        <a href="https://ai-powered-face-tracking-git-f03d76-sathyaseelan2006s-projects.vercel.app"
+                                            target="_blank" class="link-btn">Demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-portfolio" style="display: none;">
+                            <h2 class="section-title">Live Portfolio</h2>
+                            <div class="portfolio-content">
+                                <p class="portfolio-intro">Check out my complete portfolio website with interactive features and detailed project showcases.</p>
+                                <div class="portfolio-links">
+                                    <a href="https://sathya34.vercel.app/" target="_blank" class="link-btn">Open in New Tab</a>
+                                </div>
+                                <div class="portfolio-embed">
+                                    <iframe src="https://sathya34.vercel.app/" 
+                                            title="Sathyaseelan Portfolio" 
+                                            frameborder="0" 
+                                            loading="lazy"
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-about" style="display: none;">
+                            <h2 class="section-title">About Me</h2>
+                            <div class="about-content">
+                                <h3>Hi, I'm Sathyaseelan K</h3>
+                                <p class="subtitle">B.Tech IT Student | AI & ML Enthusiast</p>
+                                <p>I'm currently pursuing my B.Tech in Information Technology at M. Kumarasamy College
+                                    of Engineering. With a strong passion for problem-solving and innovation, I
+                                    specialize in building real-world applications that leverage cutting-edge
+                                    technologies like AI and Machine Learning.</p>
+
+                                <h4>🎓 Education</h4>
+                                <ul>
+                                    <li><strong>B.Tech IT</strong> - M Kumarasamy College of Engineering (CGPA: 7.8)
+                                    </li>
+                                    <li><strong>Higher Secondary</strong> - Chelammal Vidhyaashram (86%)</li>
+                                    <li><strong>Secondary</strong> - Chelammal Vidhyaashram (84%)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-skills" style="display: none;">
+                            <h2 class="section-title">Technical Skills</h2>
+                            <div class="about-content">
+                                <h3>💻 My Tech Stack</h3>
+                                <div class="skills-list">
+                                    <div class="skill-tag">Python</div>
+                                    <div class="skill-tag">Machine Learning</div>
+                                    <div class="skill-tag">JavaScript</div>
+                                    <div class="skill-tag">React</div>
+                                    <div class="skill-tag">OpenCV</div>
+                                    <div class="skill-tag">Node.js</div>
+                                    <div class="skill-tag">SQL/NoSQL</div>
+                                    <div class="skill-tag">Git & GitHub</div>
+                                    <div class="skill-tag">TensorFlow</div>
+                                    <div class="skill-tag">PyTorch</div>
+                                    <div class="skill-tag">HTML/CSS</div>
+                                    <div class="skill-tag">REST APIs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-certifications" style="display: none;">
+                            <h2 class="section-title">Certifications</h2>
+                            <div class="about-content">
+                                <h3>🏆 Professional Certifications</h3>
+                                <div class="certifications-grid">
+                                    <div class="cert-card">
+                                        <div class="cert-icon">🎓</div>
+                                        <h4>Supervised Machine Learning</h4>
+                                        <p>DeepLearning.AI & Stanford Online</p>
+                                        <a href="https://sathya34.vercel.app/coursera-certificate.pdf" target="_blank"
+                                            class="link-btn">View Certificate</a>
+                                    </div>
+                                    <div class="cert-card">
+                                        <div class="cert-icon">🔒</div>
+                                        <h4>Cyber Security for Everyone</h4>
+                                        <p>University of Maryland</p>
+                                        <a href="https://sathya34.vercel.app/Coursera%20cyber%20security%20for%20everyone%20certificate.pdf"
+                                            target="_blank" class="link-btn">View Certificate</a>
+                                    </div>
+                                    <div class="cert-card">
+                                        <div class="cert-icon">📊</div>
+                                        <h4>Data Science Professional</h4>
+                                        <p>Oracle Corporation</p>
+                                        <a href="https://sathya34.vercel.app/eCertificate%20%281%29-datascience%20professional_Oracle.pdf"
+                                            target="_blank" class="link-btn">View Certificate</a>
+                                    </div>
+                                    <div class="cert-card">
+                                        <div class="cert-icon">☁️</div>
+                                        <h4>Cloud Database Services</h4>
+                                        <p>Oracle Corporation</p>
+                                        <a href="https://sathya34.vercel.app/eCertificate-clouddatabase_service_oracle.pdf"
+                                            target="_blank" class="link-btn">View Certificate</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-goals" style="display: none;">
+                            <h2 class="section-title">Goals 2025</h2>
+                            <div class="about-content">
+                                <h3>🎯 My Vision for 2025</h3>
+                                <p class="subtitle">Growth, contribution, and building impactful projects</p>
+
+                                <div class="goals-stats">
+                                    <div class="goal-stat">
+                                        <div class="stat-number">2/5</div>
+                                        <div class="stat-label">Completed</div>
+                                    </div>
+                                    <div class="goal-stat">
+                                        <div class="stat-number">2/5</div>
+                                        <div class="stat-label">In Progress</div>
+                                    </div>
+                                    <div class="goal-stat">
+                                        <div class="stat-number">40%</div>
+                                        <div class="stat-label">Overall</div>
+                                    </div>
+                                </div>
+
+                                <div class="goals-list">
+                                    <div class="goal-item completed">
+                                        <div class="goal-status">✓</div>
+                                        <div class="goal-content">
+                                            <h4>Complete a Working AI Project</h4>
+                                            <p>Built and deployed Face Recognition Attendance System using OpenCV and
+                                                DeepFace</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item completed">
+                                        <div class="goal-status">✓</div>
+                                        <div class="goal-content">
+                                            <h4>Build Professional Portfolio Website</h4>
+                                            <p>Created responsive portfolio with interactive features and modern UI/UX
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item in-progress">
+                                        <div class="goal-status">⏳</div>
+                                        <div class="goal-content">
+                                            <h4>Contribute to 2+ Open Source Projects</h4>
+                                            <p>Actively participating in open-source community and making meaningful
+                                                contributions</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item in-progress">
+                                        <div class="goal-status">⏳</div>
+                                        <div class="goal-content">
+                                            <h4>Learn Machine Learning</h4>
+                                            <p>Mastering ML algorithms, TensorFlow, and PyTorch for intelligent
+                                                applications</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item pending">
+                                        <div class="goal-status">○</div>
+                                        <div class="goal-content">
+                                            <h4>Build a Mobile Application</h4>
+                                            <p>Develop cross-platform mobile app using React Native or Flutter</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section" id="section-resume" style="display: none;">
+                            <h2 class="section-title">Resume & Downloads</h2>
+                            <div class="downloads-grid">
+                                <a href="https://sathya34.vercel.app/sathya.pdf" target="_blank" class="download-card">
+                                    <div class="download-icon">📄</div>
+                                    <div class="download-title">Resume</div>
+                                    <div class="download-desc">View PDF</div>
+                                </a>
+                                <a href="https://sathya34.vercel.app/sathyaseelan%20K%20cv.pdf" target="_blank"
+                                    class="download-card">
+                                    <div class="download-icon">💼</div>
+                                    <div class="download-title">CV</div>
+                                    <div class="download-desc">Download PDF</div>
+                                </a>
+                                <a href="mailto:ksathyaseelan34@gmail.com" class="download-card">
+                                    <div class="download-icon">✉️</div>
+                                    <div class="download-title">Contact</div>
+                                    <div class="download-desc">Email Me</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Desktop Icons -->
+            <div class="col-auto right-sidebar">
+                <div class="desktop-icons-vertical">
+                    <div class="desktop-icon-v" data-action="home">
+                        <div class="icon-v">🖥️</div>
+                        <div class="label-v">Desktop</div>
+                    </div>
+                    <div class="desktop-icon-v" data-action="downloads">
+                        <div class="icon-v">📥</div>
+                        <div class="label-v">Downloads</div>
+                    </div>
+                    <div class="desktop-icon-v" data-action="internet">
+                        <div class="icon-v">🌐</div>
+                        <div class="label-v">Internet</div>
+                    </div>
+                    <div class="desktop-icon-v" data-action="trash">
+                        <div class="icon-v">🗑️</div>
+                        <div class="label-v">My Life</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Notepad Window -->
+    <div class="notepad-window" id="notepadWindow" style="display: none;">
+        <div class="notepad-header">
+            <div class="notepad-title">
+                <span class="notepad-icon">📝</span>
+                <span>notes.txt</span>
+            </div>
+            <div class="notepad-controls">
+                <button class="notepad-control-btn minimize" id="minimizeNote">_</button>
+                <button class="notepad-control-btn close" id="closeNote">×</button>
+            </div>
+        </div>
+        <div class="notepad-content">
+            <textarea class="notepad-textarea" id="notepad" placeholder="write something...">Welcome to my portfolio! 🎨
+
+Feel free to explore my projects and skills.
+
+Currently working on exciting new projects!</textarea>
+        </div>
+        <div class="notepad-statusbar">
+            <span id="noteStatus">Ready</span>
+            <span id="charCount">0 characters</span>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <!-- Start Menu Button -->
+        <div class="taskbar-start">
+            <div class="start-button" id="startButton">
+                <span class="start-icon">⚡</span>
+                <span class="start-text">start</span>
+            </div>
+        </div>
+
+        <!-- App Icons / Quick Launch -->
+        <div class="taskbar-apps">
+            <div class="taskbar-app active" data-action="browser" title="Browser">
+                <span class="app-icon">🌐</span>
+                <div class="active-indicator"></div>
+            </div>
+            <div class="taskbar-app" data-action="portfolio" title="Portfolio">
+                <span class="app-icon">🎨</span>
+            </div>
+            <div class="taskbar-app" data-action="projects" title="Projects">
+                <span class="app-icon">💼</span>
+            </div>
+            <div class="taskbar-app" data-action="skills" title="Skills">
+                <span class="app-icon">⚡</span>
+            </div>
+            <div class="taskbar-app" data-action="music" title="Music Player">
+                <span class="app-icon">🎵</span>
+            </div>
+            <div class="taskbar-app" data-action="notes" title="Notes">
+                <span class="app-icon">📝</span>
+            </div>
+            <div class="taskbar-app" data-action="contact" title="Contact">
+                <span class="app-icon">✉️</span>
+            </div>
+        </div>
+
+        <!-- System Tray -->
+        <div class="taskbar-tray">
+            <div class="tray-icons">
+                <div class="tray-icon" title="Network">
+                    <span class="status-dot online"></span>
+                </div>
+                <div class="tray-icon" title="Volume">🔊</div>
+                <div class="tray-icon" id="musicIndicator" title="Music" style="display: none;">🎵</div>
+            </div>
+            <div class="tray-clock">
+                <div class="clock-time" id="taskbarTime">12:00 PM</div>
+                <div class="clock-date" id="taskbarDate">12/7/2025</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
