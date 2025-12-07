@@ -47,7 +47,7 @@ A stunning retro-themed portfolio website with a modern twist, featuring a custo
 
 ## 🚀 Live Demo
 
-🔗 **[View Live Site](https://sathya34.vercel.app/)**
+🔗 **[View Live Site](https://retrosathya.vercel.app/)**
 
 ## 🛠️ Tech Stack
 
@@ -131,8 +131,8 @@ portfolioredesign/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolioredesign.git
-   cd portfolioredesign
+   git clone https://github.com/sathyaseelan2006/Retro_PC_portfolio.git
+   cd Retro_PC_portfolio
    ```
 
 2. **Open in browser**
